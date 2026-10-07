@@ -14,3 +14,4 @@ h1,h2,h3,.local-word,.quote-call a,.contact-phone{overflow-wrap:anywhere}
 .photo-location{bottom:6rem}
 @media(max-width:760px){.service-row{grid-template-columns:36px minmax(0,1fr)}.steps li{grid-template-columns:34px minmax(0,1fr)}.quote-section,.contact-section,.local-section{grid-template-columns:minmax(0,1fr)}.local-details dl div{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}.field-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.hero-visual{height:22.5rem}.final-cta p{overflow-wrap:anywhere}}
 @media(max-width:360px){.field-grid,.local-details dl div{grid-template-columns:minmax(0,1fr)}.hero-visual{height:19.375rem}}
+.photo-location{max-width:calc(100% - 64px);overflow-wrap:anywhere}
