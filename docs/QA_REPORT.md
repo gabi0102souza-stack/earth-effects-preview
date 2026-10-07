@@ -26,9 +26,16 @@ axe-core 4.10.3 tested WCAG 2 A/AA and 2.1 A/AA rules: zero violations, 27 passe
 
 ## Published result
 
-Pending public build and repeat browser QA. This section is updated only after deployment is confirmed.
+PASS at https://gabi0102souza-stack.github.io/earth-effects-preview/ . GitHub Pages API confirmed built, HTTPS enabled, source main at root, with no build error. Functional source tested at commit 8591c5f68069e3aa2e22efd0833a8a272899ac70. Published browser QA recorded October 7, 2026 at approximately 18:41 America/Sao_Paulo (21:41 UTC).
+
+All four requested viewports passed the same responsive, font, image, metadata, keyboard, service-preselection, validation, review/edit/copy and mailto checks. Public image URLs resolve under the repository project path. Zero page errors, zero failed requests and zero responsive-image cancellations in the published run. The 200% text-size checks passed at all four widths after correcting grid sizing and the tablet photo panel. Public axe-core results: zero violations, 27 passed groups, one manually reviewed incomplete contrast group.
+
+Visual review covered desktop page hierarchy and the mobile form/contact layout. The published site was opened through the app browser handoff and tested directly in Chrome. The app handoff returned queued, so browser test results rather than tab visibility establish successful opening/loading. No real email was transmitted and no call was placed.
+
+The final documentation-only commit does not change tested HTML, CSS, JavaScript, fonts or images. The latest Pages build is checked again after that commit. Browser/OS mail handler launching and real mobile hardware remain outside the scope of these emulated viewport tests.
 
 ## Evidence
 
 Local screenshots and machine-readable browser/accessibility reports are in ignored qa-artifacts/. The public repo carries this concise report rather than test inputs or environment artifacts. scripts/qa.cjs and scripts/accessibility.cjs reproduce the key checks with appropriate local dependencies.
+
 

@@ -47,6 +47,7 @@ npx playwright install chromium
 node scripts/qa.cjs
 node scripts/accessibility.cjs
 node scripts/qa.cjs https://gabi0102souza-stack.github.io/earth-effects-preview/ published
+node scripts/check-text-zoom.cjs https://gabi0102souza-stack.github.io/earth-effects-preview/ published
 ```
 
 The accessibility script expects qa-artifacts/axe.min.js (axe-core 4.10.3), obtainable from https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.3/axe.min.js . QA artifacts are ignored by Git. Recorded results are in docs/QA_REPORT.md.
@@ -60,3 +61,4 @@ Commit changes and push to main. GitHub Pages builds from root. Check the Pages 
 The photograph shows the Nolichucky River near Erwin. It is explicitly regional context, never a company project. Attribution and CC BY 3.0 link are visible in the photograph caption. Fonts are redistributed under the included SIL Open Font Licenses. See docs/ASSET_SOURCES.md.
 
 Public business facts come from listings and should not be read as current owner confirmation. Reviews, ratings, service specifics, hours and owner-history claims were omitted. No LocalBusiness schema is published until present operations are confirmed. The preview has noindex, nofollow; this requests exclusion from search and is not access control.
+
