@@ -1,0 +1,4 @@
+const {chromium}=require('./runtime.cjs').dependency('playwright');
+const fs=require('fs');
+(async()=>{const b=await chromium.launch(require('./runtime.cjs').launchOptions());const p=await b.newPage();await p.goto(process.argv[2]||'http://127.0.0.1:43821/',{waitUntil:'networkidle'});await p.addScriptTag({path:'qa-artifacts/axe.min.js'});const r=await p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa']}}));fs.writeFileSync('qa-artifacts/'+(process.argv[3]||'local')+'-accessibility.json',JSON.stringify(r,null,2));console.log(JSON.stringify({violations:r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})),passes:r.passes.length,incomplete:r.incomplete.length},null,2));await b.close();if(r.violations.length)process.exit(1)})().catch(e=>{console.error(e);process.exit(1)});
+
