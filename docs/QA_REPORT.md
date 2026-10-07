@@ -4,7 +4,7 @@ Date: October 7, 2026 (America/Sao_Paulo).
 
 ## Local result
 
-PASS on the correctly served preview at http://127.0.0.1:43821/ . Chrome/Chromium browser automation and visual review.
+After fixing enlarged-text mobile grid sizing, PASS on the correctly served preview at http://127.0.0.1:43821/ . Chrome/Chromium browser automation and visual review.
 
 | Viewport | Result |
 | --- | --- |
@@ -12,7 +12,7 @@ PASS on the correctly served preview at http://127.0.0.1:43821/ . Chrome/Chromiu
 | 768 x 1024 tablet | No horizontal overflow; image/fonts loaded; controls and content contained |
 | 390 x 844 mobile | No horizontal overflow; stacked layout and fixed call/quote actions |
 | 320 x 740 small mobile | No horizontal overflow; name/phone stack and legible controls |
-| 200% root text size at 1440px | No horizontal overflow |
+| 200% root text size at 1440, 768, 390 and 320px | No horizontal overflow or out-of-viewport elements |
 
 Verified one H1, labeled form controls, working fragment targets, skip-link keyboard navigation, visible focus styling, reduced-motion scroll behavior, title/description, Open Graph text, favicon reference, valid WebPage JSON-LD and noindex/nofollow. Phone targets use tel:+14232207705. Email targets use the exact published inbox. One high-priority responsive WebP photograph and two local WOFF2 families load successfully.
 
@@ -31,3 +31,4 @@ Pending public build and repeat browser QA. This section is updated only after d
 ## Evidence
 
 Local screenshots and machine-readable browser/accessibility reports are in ignored qa-artifacts/. The public repo carries this concise report rather than test inputs or environment artifacts. scripts/qa.cjs and scripts/accessibility.cjs reproduce the key checks with appropriate local dependencies.
+
